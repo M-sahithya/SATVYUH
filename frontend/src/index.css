@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #030712;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom space cyber scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060b18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2e52;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff88;
+}
+
+/* Futuristic background grid */
+.bg-grid-cyber {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Glassmorphism Cyber Panels */
+.cyber-panel {
+  background: rgba(11, 19, 43, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 240, 255, 0.02);
+}
+
+.cyber-panel-rose {
+  background: rgba(28, 12, 22, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  box-shadow: 0 4px 30px rgba(244, 63, 94, 0.15);
+}
+
+.cyber-panel-amber {
+  background: rgba(26, 20, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 4px 30px rgba(245, 158, 11, 0.15);
+}
+
+/* Neon buttons */
+.btn-cyber-primary {
+  @apply relative inline-flex items-center justify-center px-4 py-2 text-xs font-mono font-semibold tracking-wider uppercase transition-all duration-200 rounded;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(0, 112, 243, 0.25));
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  color: #00f0ff;
+}
+.btn-cyber-primary:hover {
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.3), rgba(0, 112, 243, 0.4));
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-cyber-danger {
+  @apply relative inline-flex items-center justify-center px-4 py-2 text-xs font-mono font-semibold tracking-wider uppercase transition-all duration-200 rounded;
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(225, 29, 72, 0.25));
+  border: 1px solid rgba(244, 63, 94, 0.5);
+  color: #fb7185;
+}
+.btn-cyber-danger:hover {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.3), rgba(225, 29, 72, 0.4));
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-cyber-amber {
+  @apply relative inline-flex items-center justify-center px-4 py-2 text-xs font-mono font-semibold tracking-wider uppercase transition-all duration-200 rounded;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.25));
+  border: 1px solid rgba(245, 158, 11, 0.5);
+  color: #fbbf24;
+}
+.btn-cyber-amber:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(217, 119, 6, 0.4));
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Radar pulse animation */
+@keyframes radar-ping {
+  0% { transform: scale(0.1); opacity: 0.8; }
+  80% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.animate-radar-ping {
+  animation: radar-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
